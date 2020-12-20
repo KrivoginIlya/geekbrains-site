@@ -1,0 +1,346 @@
+@import vars
+@import mixins
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    font-family: 'Lato', sans-serif
+
+summary
+    outline: none
+    &::-webkit-details-marker
+        display: none
+
+.center
+    padding-left: calc(50% - 570px)
+    padding-right: calc(50% - 570px)
+
+.header
+    background-color: #222
+    height: 75px
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+.img-logo
+    margin-right: 41px
+
+.img-use
+    margin-left: 34px
+    margin-right: 33px
+
+.promo
+    background: rgba(113, 103, 105, 0.08)
+    padding-left: calc(50% - 880px)
+    padding-right: calc(50% - 880px)
+    display: flex
+
+    &_left
+        width: 50%
+
+.img_promo
+    width: 100%
+
+.promo_right
+    display: flex
+    align-items: center
+    padding-left: 64px
+    width: 50%
+    background-color: #F1E4E6
+
+.promo_info
+    padding-left: 28px
+    background-image: url(img/promsvg.svg)
+    background-position: left
+    background-repeat: no-repeat
+
+.top_catalog
+    display: flex
+    padding-top: 64px
+    justify-content: space-between
+
+.catalog_list
+    position: relative
+
+    &:not(:last-child)
+        margin-right: 30px
+
+.catalog_img
+    width: 100%
+
+.bottom_catalog
+    position: relative
+
+.catalog_text
+    position: absolute
+    top: 0
+    left: 0
+    +centerFlex()
+    width: 100%
+    height: 100%
+
+.catalog_big
+    width: 100%
+    padding-top: 30px
+
+.catalog_p
+    font-size: 16px
+    line-height: 17px
+    text-align: center
+    color: #FFFFFF
+
+.catalog_h4
+    padding-top: 8px
+    color: $colorSelect
+    font-size: 19px
+    line-height: 17px
+    text-align: center
+
+.text_center
+    display: flex
+    flex-direction: column
+    align-items: center
+    padding-top: 97px
+    padding-bottom: 48px
+
+.container_top
+    display: flex
+    flex-wrap: wrap
+    padding-top: 48px
+    justify-content: space-between
+
+.sale_card:hover .img_card
+    filter: brightness(50%)
+
+.sale_card:hover .add_to_cart
+    display: flex
+
+.img_card
+    width: 100%
+
+.sale_card
+    position: relative
+    background-color: #F8F8F8
+    flex-basis: 360px
+    margin-bottom: 48px
+
+.add_to_cart
+    position: absolute
+    top: 188px
+    left: 111px
+    width: 138px
+    height: 43px
+    border: 2px solid white
+    display: none
+    align-items: center
+    justify-content: center
+    font-size: 14px
+    color: white
+
+    &:hover
+        box-shadow: 0 0 5px white
+
+.sale_h4_card
+    padding-left: 18px
+    padding-top: 24px
+    font-size: 13px
+    line-height: 16px
+    color: #000000
+    text-decoration: none
+
+.sale_p_card
+    padding: 18px
+
+.sale_price
+    padding-left: 18px
+    padding-top: 18px
+    padding-bottom: 20px
+    font-size: 16px
+    line-height: 19px
+    color: $colorSelect
+
+.all_product
+    padding: 14px 38px
+    color: $colorSelect
+    border: 1px solid $colorSelect
+    text-decoration: none
+
+    &:hover
+        background-color: $colorSelect - #111
+        color: white
+
+.product
+    display: flex
+    justify-content: center
+    padding-bottom: 95px
+
+.box_info
+    background: #222224
+    display: flex
+    justify-content: space-around
+    padding-top: 103px
+
+.info
+    display: flex
+    flex-direction: column
+    align-items: center
+    padding: 0px 15px
+
+    &_h4
+        padding-top: 20px
+        font-size: 19.96px
+        line-height: 24px
+        color: #FBFBFB
+
+    &_p
+        padding-top: 16px
+        padding-bottom: 104px
+        font-weight: 300
+        font-size: 13.972px
+        line-height: 17px
+        text-align: center
+        color: #FBFBFB
+
+.subscribe
+    padding-left: calc(50% - 880px)
+    padding-right: calc(50% - 880px)
+    background-image: url(img/subimg.jpg)
+    background-size: cover
+    background-position: center bottom
+
+.sub_box
+    top: 0
+    left: 0
+    display: flex
+    width: 100%
+    height: 100%
+    justify-content: space-between
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: center bottom
+
+.sub_left
+    display: flex
+    padding-top: 97px
+    flex-direction: column
+    align-items: center
+    padding-bottom: 120px
+    width: 50%
+
+.sub_right
+    padding-bottom: 156px
+    width: 50%
+
+.p_safe
+    padding-top: 30px
+    padding-left: calc(50% - 179px)
+    padding-right: calc(50% - 179px)
+    font-size: 20px
+    line-height: 24px
+    text-align: center
+    color: #222224
+
+.sub_email
+    padding-top: 32px
+    display: flex
+    justify-content: center
+
+.sub_form
+    position: relative
+    width: 350px
+
+.sub_input
+    width: 100%
+    height: 49px
+    padding-left: 22px
+    border-radius: 40px
+    outline: none
+    background: #E1E1E1
+    border: solid 3px #E1E1E1
+    color: #9E9C9C
+
+.sub_button
+    position: absolute
+    top: 0
+    right: 0px
+    width: 87px
+    height: 49px
+    border: none
+    background: $colorSelect
+    border-radius: 0 40px 40px 0
+    cursor: pointer
+    font-size: 14px
+    line-height: 17px
+    color: #FFFFFF
+
+    &:hover
+        background: $colorSelect - #111
+
+.h4_sub
+    text-align: center
+    padding-top: 150px
+    font-size: 20px
+    line-height: 167.2%
+    text-align: center
+    color: #222224
+
+.p_sub
+    text-align: center
+    font-size: 17px
+    line-height: 167.2%
+    text-align: center
+    color: #222224
+
+.footer
+    padding-left: calc(50% - 880px)
+    padding-right: calc(50% - 880px)
+    background: #222224
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+.all_rights
+    color: white
+    padding-left: 235px
+
+.media
+    padding: 24px 235px 24px 0px
+
+    &_icon
+        display: flex
+        justify-content: space-between
+
+    &_link
+        width: 32px
+        height: 32px
+        background-color: white
+        display: flex
+        justify-content: center
+        align-items: center
+        margin-right: 8px
+        color: #222
+
+    &_link:hover
+        background-color: $colorSelect
+        cursor: pointer
+
+    &_link:hover .link_icon
+        filter: invert(1)
+
+    &_link:hover .inst_icon
+        filter: none
+
+.inst_icon
+    filter: invert(1)
+
+.footer_link
+    background-color: white
+
+/* catalog */
+@import catalog
+// product
+@import product
+// cart
+@import cart
+// registration
+@import registration
