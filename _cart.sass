@@ -1,134 +1,97 @@
-.navigation
-    display: flex
-    justify-content: space-between
-    background: #F8F3F4
-
-    &_left
-        padding-top: 59px
-
-    &_right
-        padding-top: 65px
-        padding-bottom: 66px
-        display: flex
-
-.nav_link
-    text-decoration: none
-    font-weight: 300
-    font-size: 14px
-    line-height: 17px
-    color: #636363
-
-    &:hover
-        color: $colorSelect
-
-    &:last-child
-        color: $colorSelect
-
-    &:not(:last-child)::after
-        content: "/"
-        padding: 6px
-
-.info_new
+.info_cart
+    padding-bottom: 60px
     text-decoration: none
     font-size: 24px
     line-height: 29px
     color: $colorSelect
-
-/* sortirovka */
-.sort
+.cart_box
     display: flex
-    position: relative
-    padding-top: 35px
-    padding-bottom: 16px
+    &_left
+        width: 657px
+    &_right
+        width: 100%
+        padding-left: 128px
+        padding-top: 113px
 
-    &_filter
-
-    &_parametr
-        margin-left: calc(33.33333% + 16px)
-        display: flex
-        padding-top: 16px
-
-    &_items
-        display: none
-
-    &_filter_active:hover .sort_items
-        display: block
-
-    &_text
-        padding-top: 16px
-        position: absolute
-        padding-left: 16px
+.cart_card
+    background-color: #FFFFFF
+    width: 657px
+    margin-top: 96px
+    display: flex
+    filter: drop-shadow(17px 19px 24px rgba(0, 0, 0, 0.13))
+    &_mb
+        margin-bottom: 40px
+    &__content
+        padding-left: 32px
+        padding-top: 22px
+    &__h3
+        text-decoration: none
         font-weight: 600
+        font-size: 26px
+        line-height: 29px
+        color: #222222
+        width: 262px
+    &__text
+        font-size: 22px
+        line-height: 26px
+        color: #575757
+        padding-bottom: 8px
+    &__del
+        padding-top: 28px
+        display: flex
+        padding-left: 37px
+
+.button
+    display: flex
+    justify-content: space-between
+    &__bay
+        font-weight: 300
         font-size: 14px
         line-height: 17px
         color: #000000
-        font-family: Lato
+        background: #FFFFFF
+        padding: 16px 40px 16px 38px
+        border: 1px solid #A4A4A4
+        margin-bottom: 128px
+        cursor: pointer
+    &__proceed
+        margin-left: 43px
+        margin-top: 39px
+        margin-bottom: 42px
+        border: 1px solid #EAEAEA
+        padding: 14px 38px
+        color: $colorSelect
+        border: 1px solid $colorSelect
+        text-decoration: none
 
-    &_filter_active:hover .sort_text
-        display: none
+        &:hover
+            background-color: $colorSelect - #111
+            color: white
+            transition: all 1s ease
 
-    &_filt_activ
-        color: #EF5B70
-        font-weight: 600
-        font-size: 14px
-        line-height: 17px
+.cart_rigth__h4
+    padding-bottom: 20px
 
-    &_summary
-        margin-left: 16px
-        margin-top: 24px
-        display: flex
-        align-items: center
-        background-image: url(img/slash.svg)
-        background-position: bottom
-        background-repeat: no-repeat
-
-.h4_sort_summary
-    padding-left: 8px
-    font-size: 14px
-    line-height: 17px
-    color: #EF5B70
-    cursor: pointer
-
-.sort_filter_active:hover
-    width: 360px
-    background: #FFFFFF
-    box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21)
-    padding: 16px
-    box-sizing: border-box
-    position: absolute
-    z-index: 1
-
-.sort_ul
+.cart_right__intup
+    width: 100%
+    height: 45px
+    padding-left: 18px
     padding-top: 12px
-    list-style-type: none
-    padding-left: 30px
-    font-size: 14px
-    line-height: 17px
-    color: #6F6E6E
+    padding-bottom: 16px
+    font-weight: 300
+    font-size: 13px
+    line-height: 16px
+    color: #B1B1B1
+    margin-bottom: 20px
+    border: 1px solid #A4A4A4
 
-.li_sort_ul
+.cart_right__total
+    text-align: right
+    background-color: #F5F3F3
+    padding-right: 43px
+
+.sub_total
+    padding-top: 39px
+
+.grand_total
     padding-top: 12px
-    display: block
-    text-decoration: none
-    font-size: 14px
-    line-height: 17px
-    color: #6F6E6E
-
-    &:hover
-        color: #EF5B70
-
-.sort_size
-    background: #FFFFFF
-    box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21)
-    padding: 8px 30px 8px 8px
-    display: flex
-    flex-direction: column
-    position: absolute
-    top: 24px
-    left: 0px
-    z-index: 1
-
-.sort_open
-    position: relative
-    padding-right: 32px
-    cursor: pointer
