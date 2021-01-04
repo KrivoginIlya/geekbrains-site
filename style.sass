@@ -10,10 +10,15 @@ body
 button
     outline: none
 
+input
+    padding-right: 16px
+
 summary
     outline: none
     &::-webkit-details-marker
         display: none
+li
+    list-style-type: none
 
 .center
     padding-left: calc(50% - 570px)
@@ -44,6 +49,56 @@ summary
 
 .img_promo
     width: 100%
+
+#switcher
+    position: absolute
+    left: -9999999px
+    visibility: hidden
+    &:checked ~ .drop
+        opacity: 1
+        visibility: visible
+
+.drop
+    background: #FFFFFF
+    box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21)
+    padding: 32px
+    top: 75px
+    position: absolute
+    right: 0px
+    opacity: 0
+    width: 232px
+    z-index: 2
+    visibility: hidden
+    &__name
+        font-family: Lato
+        font-style: normal
+        font-weight: bold
+        font-size: 14px
+        line-height: 17px
+        color: #000000
+        padding-bottom: 24px
+        display: block
+        cursor: default
+    &__heading
+        font-family: Lato
+        font-style: normal
+        font-weight: normal
+        font-size: 14px
+        line-height: 17px
+        color: $colorSelect
+        text-decoration: none
+    &__ul
+        padding-left: 20px
+        margin-top: 12px
+    &__link
+        font-size: 14px
+        line-height: 17px
+        color: #6F6E6E
+        margin-bottom: 11px
+        display: block
+        &:hover
+            color: $colorSelect
+            cursor: pointer
 
 .promo_right
     display: flex
@@ -108,14 +163,17 @@ summary
     padding-bottom: 48px
 
 .container_top
+    gap: 30px
+    margin-bottom: 48px
     display: flex
     flex-wrap: wrap
     padding-top: 48px
     justify-content: space-between
 
 .sale_card:hover .img_card
-    filter: brightness(50%)
-
+    filter: brightness(40%)
+    transform: scale(1.03)
+    transition: all 1s ease
 .sale_card:hover .add_to_cart
     display: flex
 
@@ -126,7 +184,6 @@ summary
     position: relative
     background-color: #F8F8F8
     flex-basis: 360px
-    margin-bottom: 48px
 
 .add_to_cart
     position: absolute
@@ -172,6 +229,7 @@ summary
     &:hover
         background-color: $colorSelect - #111
         color: white
+        transition: all 1s ease
 
 .product
     display: flex
@@ -389,6 +447,7 @@ summary
         &:not(:last-child)
             margin-right: 0px
     .catalog_big
+        padding-top: 0px
         padding-left: 16px
         padding-right: 16px
         width: 100%
